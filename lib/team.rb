@@ -18,4 +18,11 @@ class Team
 	def favored?
 		@players.include? "Amrit"
 	end
+
+	def enter_competition competition
+		raise Competition::Closed if competition.questions.empty?
+		
+	end
+
+
 end
